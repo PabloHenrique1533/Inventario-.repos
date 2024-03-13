@@ -1,0 +1,9 @@
+Ideias de Projetos (jef)
+
+1.Gerenciador de Despesas Pessoais: Desenvolva uma aplicação para ajudar os usuários a controlar suas despesas pessoais. Eles podem inserir suas despesas diárias, categorizá-las por tipo (alimentação, transporte, lazer, etc.), definir um orçamento mensal e visualizar gráficos que mostrem sua situação financeira.
+
+2.Aplicativo de Previsão do Tempo (Weather Forecast App):
+Desenvolva um aplicativo que forneça previsões meteorológicas para diferentes localidades. Os usuários podem pesquisar o clima atual e previsões futuras, receber alertas de condições climáticas adversas e visualizar mapas de radar. Você pode incluir recursos como personalização de unidades de temperatura, histórico de clima e integração com APIs de dados meteorológicos.
+
+3. Sistema de Cadastro de Funcionários:
+Desenvolva um sistema de cadastro de funcionários para uma empresa. Crie classes para representar os funcionários, com atributos como nome, cargo, salário, etc. Implemente métodos para adicionar, remover, atualizar e listar os funcionários. Pratique conceitos como herança, encapsulamento e polimorfismo.
