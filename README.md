@@ -7,4 +7,4 @@ Nesse Sistema Vamos Implementar os elementos essencias como: Cadastro de produto
 Um Sistema de gestão de estoque bem projetado e otimizado pode ser importante para empresa, ajudando ela a reduzir custos com excesso de produtos ou com falta de estoque, e tambem ajudando ela propria com a organização dos produtos delas e tambem na vendas para os clientes. 
 
 
-Pablo Henrique Teixeira Da Silva, Rodrigo Silva De Lima. 
+Pablo Henrique Teixeira Da Silva, Rodrigo Silva De Lima, Felipe Barbosa do Patronicio, Gabriel Oliveira Brandão.
