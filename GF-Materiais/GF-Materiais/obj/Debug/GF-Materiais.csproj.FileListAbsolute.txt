@@ -11,3 +11,12 @@ C:\Users\DATEN\source\repos\GF-Materiais\GF-Materiais\obj\Debug\GF-Materiais.csp
 C:\Users\DATEN\source\repos\GF-Materiais\GF-Materiais\bin\Debug\MySql.Data.dll
 C:\Users\DATEN\source\repos\GF-Materiais\GF-Materiais\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\DATEN\source\repos\GF-Materiais\GF-Materiais\bin\Debug\MySql.Data.xml
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\bin\Debug\GF-Materiais.exe.config
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\bin\Debug\GF-Materiais.exe
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\bin\Debug\GF-Materiais.pdb
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\bin\Debug\ClassEstoques.pdb
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\obj\Debug\GF-Materiais.csproj.AssemblyReference.cache
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\obj\Debug\GF-Materiais.csproj.CoreCompileInputs.cache
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\obj\Debug\GF-Materiais.csproj.CopyComplete
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\obj\Debug\GF-Materiais.exe
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\obj\Debug\GF-Materiais.pdb

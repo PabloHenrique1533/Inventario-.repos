@@ -1,0 +1,12 @@
+C:\Users\DATEN\source\repos\ClassEstoques\ClassEstoques\bin\Debug\ClassEstoques.dll
+C:\Users\DATEN\source\repos\ClassEstoques\ClassEstoques\bin\Debug\ClassEstoques.pdb
+C:\Users\DATEN\source\repos\ClassEstoques\ClassEstoques\obj\Debug\ClassEstoques.csproj.AssemblyReference.cache
+C:\Users\DATEN\source\repos\ClassEstoques\ClassEstoques\obj\Debug\ClassEstoques.csproj.CoreCompileInputs.cache
+C:\Users\DATEN\source\repos\ClassEstoques\ClassEstoques\obj\Debug\ClassEstoques.dll
+C:\Users\DATEN\source\repos\ClassEstoques\ClassEstoques\obj\Debug\ClassEstoques.pdb
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\ClassEstoques(biblioteca)\ClassEstoques\bin\Debug\ClassEstoques.dll
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\ClassEstoques(biblioteca)\ClassEstoques\bin\Debug\ClassEstoques.pdb
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\ClassEstoques(biblioteca)\ClassEstoques\obj\Debug\ClassEstoques.csproj.AssemblyReference.cache
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\ClassEstoques(biblioteca)\ClassEstoques\obj\Debug\ClassEstoques.csproj.CoreCompileInputs.cache
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\ClassEstoques(biblioteca)\ClassEstoques\obj\Debug\ClassEstoques.dll
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\ClassEstoques(biblioteca)\ClassEstoques\obj\Debug\ClassEstoques.pdb

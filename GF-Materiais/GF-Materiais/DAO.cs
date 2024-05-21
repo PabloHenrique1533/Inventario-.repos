@@ -10,7 +10,7 @@ namespace GF_Materiais
 {
     class DAO
     {
-        string conexaoString = "server=localhost;port=3307;Database=estoque;uid=root;pwd=''";
+        string conexaoString = "server=localhost;port=3306;Database=estoque;uid=root;pwd=''";
         public MySqlCommand cmd;
         MySqlConnection conexao;
 
@@ -30,19 +30,32 @@ namespace GF_Materiais
         public void insert_dados(string comando)
         {
             cmd = new MySqlCommand(comando, conexao);
+            int linha = cmd.ExecuteNonQuery();
+            try
+            {
+                if (linha == 0)
+                {
+                    Console.WriteLine("erro");
+                }
+                else
+                {
+                    Console.WriteLine("linhas {0}", linha);
+                }
+            }catch(Exception ex)
+            {
+                Console.WriteLine("Erro ao executar o comando SQL:" + ex.Message);
+            }
+            finally
+            {
+                if(conexao.State == System.Data.ConnectionState.Open)
+                {
+                    conexao.Close();
+                }
+            }
         }
 
         public void verificar_linhas()
         {
-            int linha = cmd.ExecuteNonQuery();
-            if(linha == 0)
-            {
-                Console.WriteLine("erro");
-            }
-            else
-            {
-                Console.WriteLine("linhas {0}", linha);
-            }
         }
     }
 }

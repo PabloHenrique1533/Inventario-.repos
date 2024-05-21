@@ -12,11 +12,11 @@ namespace ClassEstoques
             
             public string nome;
             public string descricao;
-            public double preco_compra;
+            public decimal preco_compra;
             public int qnt_estoque;
             public int qnt_min;
             public string categoria;
-            public int dt_entrada_estoque; 
+            public DateTime dt_entrada_estoque; 
 
                 public void cadastrarproduto()
             {
@@ -27,7 +27,7 @@ namespace ClassEstoques
                 descricao = Console.ReadLine();
 
                 Console.WriteLine("Informe o Preco:");
-                preco_compra = double.Parse(Console.ReadLine());
+                preco_compra = decimal.Parse(Console.ReadLine());
 
                 Console.WriteLine("informe a quantidade do estoque:");
                 qnt_estoque = int.Parse(Console.ReadLine());
@@ -39,7 +39,7 @@ namespace ClassEstoques
                 categoria = Console.ReadLine();
 
                 Console.WriteLine("Informe a Data que Chegou a Ultima Remessa de Estoque:");
-                dt_entrada_estoque = int.Parse(Console.ReadLine());
+                dt_entrada_estoque = DateTime.Parse(Console.ReadLine());
 
             }
         }
