@@ -2,68 +2,98 @@ create database estoque;
 use estoque;
 drop database estoque;
 
-create table Produto
-(idProduto integer primary key,
-idFornecedor int,
-nome varchar(100),
-descrição text,
-preço_compra decimal(10,2),
-qnt_estoque int,
-qnt_min int,
-categoria varchar(100),
-dt_entrada_estoque date,
-constraint fornecedor_FK foreign key (idFornecedor) references Fornecedor (idFornecedor));
 
-create table Fornecedor
-(idFornecedor integer primary key,
-nome varchar(100),
-cnpj varchar(14),
-endereco varchar(100),
-telefone varchar(20),
-email varchar(100));
 
-create table Pedido
-(idPedido integer primary key,
-idUsuario int,
-idCliente int,
-idProduto int,
-data_pedido date,
-data_entrega_esperada date,
-status_pedido varchar(100),
-valor_total decimal(10,2),
-constraint usuario_FK foreign key (idUsuario) references usuario (idUsuario),
-constraint cliente_FK foreign key (idCliente) references cliente (idCliente),
-constraint produto_FK foreign key (idProduto) references Produto (idProduto));
+-- Criação das tabelas no MySQL
 
-create table Cliente
-(idCliente integer primary key,
-idEndereco int ,
-nome varchar(100),
-cpf char(11),
-endereco varchar(100),
-email varchar(100),
-constraint endereco_FK foreign key (idEndereco) references endereco (idEndereco));
+CREATE TABLE LocalizacaoEstoque (
+    idLocalizacaoEstoque INTEGER PRIMARY KEY
+);
 
-create table endereco
-(idEndereco integer primary key,
-cep char(8),
-nome_rua varchar(100),
-complemento varchar(100),
-numero_casa int);
+CREATE TABLE Pessoa (
+    idPessoa INTEGER PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    endereco VARCHAR(100)
+);
 
-create table item_do_pedido
-(idItem_Pedido integer primary key,
-idPedido int,
-quantidade int,
-preco_unitario decimal(10,2),
-subtotal decimal(10,2),
-constraint pedido_FK foreign key (idPedido) references Pedido (idPedido));
+CREATE TABLE Fornecedor (
+    idFornecedor INTEGER PRIMARY KEY,
+    Pessoa_idPessoa INTEGER,
+    cnpj INT,
+    telefone INTEGER,
+    FOREIGN KEY (Pessoa_idPessoa) REFERENCES Pessoa(idPessoa)
+);
 
-create table Usuario
-(idUsuario integer primary key,
-nome_usuario varchar(100),
-senha varchar(100),
-nome_completo varchar(100),
-cargo varchar(100),
-permissoes_acesso text);
+CREATE TABLE Usuario (
+    idUsuario INTEGER PRIMARY KEY,
+    Pessoa_idPessoa INTEGER,
+    senha INTEGER,
+    nome_completo VARCHAR(100),
+    tipo VARCHAR(100),
+    cargo VARCHAR(100),
+    permissoes_acesso VARCHAR(100),
+    FOREIGN KEY (Pessoa_idPessoa) REFERENCES Pessoa(idPessoa)
+);
+
+CREATE TABLE Cliente (
+    idcliente INTEGER PRIMARY KEY,
+    Pessoa_idPessoa INTEGER,
+    cpf VARCHAR(100),
+    FOREIGN KEY (Pessoa_idPessoa) REFERENCES Pessoa(idPessoa)
+);
+
+CREATE TABLE Produto (
+    idProduto INTEGER PRIMARY KEY,
+    LocalizacaoEstoque_idLocalizacaoEstoque INTEGER,
+    Fornecedor_idFornecedor INTEGER,
+    nome VARCHAR(100),
+    descricao VARCHAR(100),
+    preco_compra DOUBLE,
+    qnt_estoque INTEGER,
+    qnt_min INTEGER,
+    categoria VARCHAR(100),
+    FOREIGN KEY (LocalizacaoEstoque_idLocalizacaoEstoque) REFERENCES LocalizacaoEstoque(idLocalizacaoEstoque),
+    FOREIGN KEY (Fornecedor_idFornecedor) REFERENCES Fornecedor(idFornecedor)
+);
+
+CREATE TABLE Pedido (
+    idPedido INTEGER PRIMARY KEY,
+    cliente_idcliente INTEGER,
+    data_pedido DATE,
+    data_entrega DATE,
+    status_pedido VARCHAR(100),
+    valor_total DOUBLE,
+    FOREIGN KEY (cliente_idcliente) REFERENCES Cliente(idcliente)
+);
+
+CREATE TABLE Produto_has_Pedido (
+    Produto_idProduto INTEGER,
+    Pedido_idPedido INTEGER,
+    quantidade INTEGER,
+    preco_unitario DOUBLE,
+    subtotal DOUBLE,
+    PRIMARY KEY (Produto_idProduto, Pedido_idPedido),
+    FOREIGN KEY (Produto_idProduto) REFERENCES Produto(idProduto),
+    FOREIGN KEY (Pedido_idPedido) REFERENCES Pedido(idPedido)
+);
+
+CREATE TABLE Item_do_pedido (
+    iditem_do_pedido INTEGER PRIMARY KEY,
+    Pedido_idPedido INTEGER,
+    quantidade INTEGER,
+    preco_unitario DOUBLE,
+    subtotal DOUBLE,
+    FOREIGN KEY (Pedido_idPedido) REFERENCES Pedido(idPedido)
+);
+
+CREATE TABLE Relatorio (
+    idRelatorio INTEGER PRIMARY KEY,
+    Usuario_idUsuario INTEGER,
+    tipo VARCHAR(100),
+    data_geracao DATE,
+    FOREIGN KEY (Usuario_idUsuario) REFERENCES Usuario(idUsuario)
+);
+
+select * from relatorio
 
