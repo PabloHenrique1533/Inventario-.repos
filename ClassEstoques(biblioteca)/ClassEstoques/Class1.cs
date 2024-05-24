@@ -16,7 +16,7 @@ namespace ClassEstoques
             public int qnt_estoque;
             public int qnt_min;
             public string categoria;
-            public DateTime dt_entrada_estoque; 
+            
 
                 public void cadastrarproduto()
             {
@@ -42,6 +42,34 @@ namespace ClassEstoques
                 dt_entrada_estoque = DateTime.Parse(Console.ReadLine());
 
             }
+            
+            public void ProcuraProduto()
+            {
+
+            }
+
+            public void RemoverProduto()
+            {
+
+            }
+            
+            public void AtualizarPreco()
+            {
+
+            }
+
+            public void AtualizarEstoque()
+            {
+
+            }
+            public void RegistrarEntradaProduto()
+            {
+
+            }
+            public void RegistrarSaidaProduto()
+            {
+
+            }
         }
 
         public class Fornecedor
@@ -51,31 +79,90 @@ namespace ClassEstoques
             string endereco;
             int telefone;
             string enmail;  
+            public void CadastrarFornecedor()
+            {
+
+            }
+
+            public void RemoverFuncionario()
+            {
+
+            }
+            public void AtualizarFornecedor()
+            {
+
+            }
         }
 
         public class Cliente
         {
-            string nome;
-            int cpf;
-            string endereco;
-            string email;      
+            int cpf;  
+        
+            public void CadastroCliente()
+            {
+
+            }
+            public void RemoverCliente()
+            {
+
+            }
+            public void AtualizarCliente()
+            {
+
+            }
         }
 
-        public class Usuario
+        public class Funcionario
         {
-            string nome;
-            int senha;
             string nome_completo;
+            string senha;
             string cargo;
+            string tipo;
             string permissoes_acesso;
+
+            public void CadastrarFuncionario()
+            {
+
+            }
+
+            public void Login()
+            {
+
+            }
+
+            public void RemoverFuncionario()
+            {
+
+            }
+
+            public void AtualizarFuncionario()
+            {
+
+            }
+
         }
 
         public class Pedido
         {
-            string data_pedido;
-            string data_entrega;
-            string status;
-            int valor_total;
+            DateTime data_pedido;
+            DateTime data_entrega;
+            string status_pedido;
+            decimal valor_total;
+
+            public void FzrPedido()
+            {
+
+            }
+
+            public void AtualizarPedido()
+            {
+
+            }
+
+            public void RegistrarentradaPedido()
+            {
+
+            }
         }
 
         public class ItemPedido
@@ -83,6 +170,33 @@ namespace ClassEstoques
             int quantidade;
             double preco_unitario;
             double subtotal;
+
+            public void CalcularSubtotal()
+            {
+
+            }
+        }
+        
+        public class Relatorio
+        {
+             string tipo;
+            DateTime data_geracao;
+
+            public void GerarRelatorio()
+            {
+
+            }
+
+            public void ObterRelatorio()
+            {
+
+            }
         }
     
+        public class Pessoa
+        {
+            string nome;
+              string email;
+           public string endereco;
+        }
 }

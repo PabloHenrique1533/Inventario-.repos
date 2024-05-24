@@ -45,7 +45,7 @@ CREATE TABLE Cliente (
 
 CREATE TABLE Produto (
     idProduto INTEGER PRIMARY KEY,
-    LocalizacaoEstoque_idLocalizacaoEstoque INTEGER,
+    LocalizacaoEstoque_id INTEGER,
     Fornecedor_idFornecedor INTEGER,
     nome VARCHAR(100),
     descricao VARCHAR(100),
@@ -53,7 +53,7 @@ CREATE TABLE Produto (
     qnt_estoque INTEGER,
     qnt_min INTEGER,
     categoria VARCHAR(100),
-    FOREIGN KEY (LocalizacaoEstoque_idLocalizacaoEstoque) REFERENCES LocalizacaoEstoque(idLocalizacaoEstoque),
+    FOREIGN KEY (LocalizacaoEstoque_id) REFERENCES LocalizacaoEstoque_id(idLocalizacaoEstoque),
     FOREIGN KEY (Fornecedor_idFornecedor) REFERENCES Fornecedor(idFornecedor)
 );
 
