@@ -17,14 +17,15 @@ namespace GF_Materiais
             produto1.cadastrarproduto();
             DAO dados = new DAO();
             dados.bd();
-            dados.insert_dados("INSERT INTO Produto (nome, descricao, preço_compra, qnt_estoque, qnt_min, categoria, dt_entrada_estoque) VALUES(@nome, @descricao, @preço_compra, @qnt_estoque, @qnt_min, @categoria, @dt_entrada_estoque");
-            dados.cmd.Parameters.AddWithValue("@nome", produto1.nome);
-            dados.cmd.Parameters.AddWithValue("@descricao", produto1.descricao);
-            dados.cmd.Parameters.AddWithValue("@preço_compra", produto1.preco_compra);
-            dados.cmd.Parameters.AddWithValue("@qnt_estoque", produto1.qnt_estoque);
-            dados.cmd.Parameters.AddWithValue("@qnt_min", produto1.qnt_min);
-            dados.cmd.Parameters.AddWithValue("@categoria", produto1.categoria);
-            dados.cmd.Parameters.AddWithValue("@dt_entrada_estoque", produto1.data_estoque);
+            dados.insert_dados("INSERT INTO Produto (nome, descricao, preço_compra, qnt_estoque, qnt_min, categoria) VALUES(@nome, @descricao, @preço_compra, @qnt_estoque, @qnt_min, @categoria");
+            dados.InserirNoBanco("@nome", produto1.nome);
+            dados.InserirNoBanco("@descricao", produto1.descricao);
+            dados.InserirNoBanco("@preço_compra", produto1.preco_compra);
+            dados.InserirNoBanco("@qnt_estoque", produto1.qnt_estoque);
+            dados.InserirNoBanco("@qnt_min", produto1.qnt_min);
+            dados.InserirNoBanco("@categoria", produto1.categoria);
+
+
 
             dados.verificar_linhas();
             Console.ReadKey();

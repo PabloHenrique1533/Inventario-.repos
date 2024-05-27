@@ -30,7 +30,12 @@ namespace GF_Materiais
         public void insert_dados(string comando)
         {
             cmd = new MySqlCommand(comando, conexao);
-            int linha = cmd.ExecuteNonQuery();
+            
+        }
+
+        public void verificar_linhas()
+        {
+            szint linha = cmd.ExecuteNonQuery();
             try
             {
                 if (linha == 0)
@@ -41,21 +46,23 @@ namespace GF_Materiais
                 {
                     Console.WriteLine("linhas {0}", linha);
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine("Erro ao executar o comando SQL:" + ex.Message);
             }
             finally
             {
-                if(conexao.State == System.Data.ConnectionState.Open)
+                if (conexao.State == System.Data.ConnectionState.Open)
                 {
                     conexao.Close();
                 }
             }
         }
 
-        public void verificar_linhas()
+        public void InserirNoBanco(string comando, object value)
         {
+            cmd.Parameters.AddWithValue(comando, value);
         }
     }
 }

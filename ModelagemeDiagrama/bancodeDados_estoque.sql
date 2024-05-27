@@ -1,6 +1,5 @@
 create database estoque;
 use estoque;
-drop database estoque;
 
 
 
@@ -53,7 +52,7 @@ CREATE TABLE Produto (
     qnt_estoque INTEGER,
     qnt_min INTEGER,
     categoria VARCHAR(100),
-    FOREIGN KEY (LocalizacaoEstoque_id) REFERENCES LocalizacaoEstoque_id(idLocalizacaoEstoque),
+    FOREIGN KEY (LocalizacaoEstoque_id) REFERENCES LocalizacaoEstoque (idLocalizacaoEstoque),
     FOREIGN KEY (Fornecedor_idFornecedor) REFERENCES Fornecedor(idFornecedor)
 );
 
