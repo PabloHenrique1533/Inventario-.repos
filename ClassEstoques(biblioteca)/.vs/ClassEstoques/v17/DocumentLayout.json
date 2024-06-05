@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Tecnico\\Desktop\\GF-Materiais.repos\\ClassEstoques(biblioteca)\\ClassEstoques\\",
+  "WorkspaceRootPath": "C:\\Users\\Tecnico\\Desktop\\GF-Materiais.repos\\ClassEstoques(biblioteca)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tecnico\\Desktop\\GF-Materiais.repos\\ClassEstoques(biblioteca)\\ClassEstoques\\Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{62943880-4675-4829-BAFC-6EF322143275}|ClassEstoques\\ClassEstoques.csproj|c:\\users\\tecnico\\desktop\\gf-materiais.repos\\classestoques(biblioteca)\\classestoques\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62943880-4675-4829-BAFC-6EF322143275}|ClassEstoques\\ClassEstoques.csproj|solutionrelative:classestoques\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,12 +21,12 @@
               "DocumentIndex": 0,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Tecnico\\Desktop\\GF-Materiais.repos\\ClassEstoques(biblioteca)\\ClassEstoques\\Class1.cs",
-              "RelativeDocumentMoniker": "Class1.cs",
+              "RelativeDocumentMoniker": "ClassEstoques\\Class1.cs",
               "ToolTip": "C:\\Users\\Tecnico\\Desktop\\GF-Materiais.repos\\ClassEstoques(biblioteca)\\ClassEstoques\\Class1.cs",
-              "RelativeToolTip": "Class1.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABIAAAAAAAAA",
+              "RelativeToolTip": "ClassEstoques\\Class1.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAADIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T19:35:27.688Z",
+              "WhenOpened": "2024-06-05T19:59:09.07Z",
               "EditorCaption": ""
             }
           ]

@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="ClassEstoques, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ClassEstoques\ClassEstoques\obj\Debug\ClassEstoques.dll</HintPath>
+      <HintPath>..\..\ClassEstoques(biblioteca)\ClassEstoques\bin\Debug\ClassEstoques.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\Downloads\v4.6.2\MySql.Data.dll</HintPath>

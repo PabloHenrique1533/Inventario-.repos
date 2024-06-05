@@ -25,3 +25,4 @@ C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\bin\Debug\
 C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\bin\Debug\System.Buffers.dll
 C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\bin\Debug\MySql.Data.xml
 C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\obj\Debug\GF-Mater.57F0705B.Up2Date
+C:\Users\Tecnico\Desktop\GF-Materiais.repos\GF-Materiais\GF-Materiais\bin\Debug\ClassEstoques.dll

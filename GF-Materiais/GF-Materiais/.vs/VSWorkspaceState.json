@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\obj",
+    "\\Properties"
   ],
-  "SelectedNode": "\\DAO.cs",
+  "SelectedNode": "\\bin",
   "PreviewInSolutionExplorer": false
 }

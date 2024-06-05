@@ -15,19 +15,20 @@ namespace GF_Materiais
         {
             Produto produto1 = new Produto();
             produto1.cadastrarproduto();
+
             DAO dados = new DAO();
             dados.bd();
-            dados.insert_dados("INSERT INTO Produto (nome, descricao, preço_compra, qnt_estoque, qnt_min, categoria) VALUES(@nome, @descricao, @preço_compra, @qnt_estoque, @qnt_min, @categoria");
-            dados.InserirNoBanco("@nome", produto1.nome);
-            dados.InserirNoBanco("@descricao", produto1.descricao);
-            dados.InserirNoBanco("@preço_compra", produto1.preco_compra);
-            dados.InserirNoBanco("@qnt_estoque", produto1.qnt_estoque);
-            dados.InserirNoBanco("@qnt_min", produto1.qnt_min);
-            dados.InserirNoBanco("@categoria", produto1.categoria);
 
+            string comando = "INSERT INTO Produto (nome, descricao, preco_compra, qnt_estoque, qnt_min, categoria) VALUES (@nome, @descricao, @preco_compra, @qnt_estoque, @qnt_min, @categoria)";
 
+            dados.InserirNoBanco(comando,
+                new MySqlParameter("@nome", produto1.nome),
+                new MySqlParameter("@descricao", produto1.descricao),
+                new MySqlParameter("@preco_compra", produto1.preco_compra),
+                new MySqlParameter("@qnt_estoque", produto1.qnt_estoque),
+                new MySqlParameter("@qnt_min", produto1.qnt_min),
+                new MySqlParameter("@categoria", produto1.categoria));
 
-            dados.verificar_linhas();
             Console.ReadKey();
         }
     }

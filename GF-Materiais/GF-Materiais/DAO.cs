@@ -11,7 +11,6 @@ namespace GF_Materiais
     class DAO
     {
         string conexaoString = "server=localhost;port=3306;Database=estoque;uid=root;pwd=''";
-        public MySqlCommand cmd;
         MySqlConnection conexao;
 
         public void bd()
@@ -20,49 +19,63 @@ namespace GF_Materiais
             {
                 conexao = new MySqlConnection(conexaoString);
                 conexao.Open();
-
+                Console.WriteLine("Conexão estabelecida com sucesso.");
             }
-            catch (Exception a)
+            catch (Exception ex)
             {
-                Console.WriteLine(a);
+                Console.WriteLine("Erro ao estabelecer conexão: " + ex.Message);
             }
         }
+
         public void insert_dados(string comando)
         {
-            cmd = new MySqlCommand(comando, conexao);
-            
-        }
-
-        public void verificar_linhas()
-        {
-            szint linha = cmd.ExecuteNonQuery();
             try
             {
-                if (linha == 0)
+                using (MySqlCommand cmd = new MySqlCommand(comando, conexao))
                 {
-                    Console.WriteLine("erro");
-                }
-                else
-                {
-                    Console.WriteLine("linhas {0}", linha);
+                    int linhasAfetadas = cmd.ExecuteNonQuery();
+                    if (linhasAfetadas == 0)
+                    {
+                        Console.WriteLine("Nenhuma linha foi afetada.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Número de linhas afetadas: {0}", linhasAfetadas);
+                    }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Erro ao executar o comando SQL:" + ex.Message);
-            }
-            finally
-            {
-                if (conexao.State == System.Data.ConnectionState.Open)
-                {
-                    conexao.Close();
-                }
+                Console.WriteLine("Erro ao executar o comando SQL: " + ex.Message);
             }
         }
 
-        public void InserirNoBanco(string comando, object value)
+        public void InserirNoBanco(string query, params MySqlParameter[] parametros)
         {
-            cmd.Parameters.AddWithValue(comando, value);
+            try
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, conexao))
+                {
+                    foreach (var param in parametros)
+                    {
+                        cmd.Parameters.Add(param);
+                    }
+
+                    int linhasAfetadas = cmd.ExecuteNonQuery();
+                    if (linhasAfetadas == 0)
+                    {
+                        Console.WriteLine("Nenhuma linha foi afetada.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Número de linhas afetadas: {0}", linhasAfetadas);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao executar o comando SQL: " + ex.Message);
+            }
         }
     }
 }
