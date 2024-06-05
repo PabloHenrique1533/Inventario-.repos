@@ -21,23 +21,45 @@ namespace ClassEstoques
         public void cadastrarproduto()
         {
             Console.WriteLine("Digite o Nome do Produto:");
-            nome = Console.ReadLine();
+            this.nome = Console.ReadLine();
 
-            Console.WriteLine("Descreve Ele:");
-            descricao = Console.ReadLine();
+            Console.WriteLine("Insira a Descrição Do Produto:");
+            this.descricao = Console.ReadLine();
 
-            Console.WriteLine("Informe o Preco:");
-            preco_compra = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Informe o Preço do Produto:");
+            this.preco_compra = decimal.Parse(Console.ReadLine());
 
-            Console.WriteLine("informe a quantidade do estoque:");
-            qnt_estoque = int.Parse(Console.ReadLine());
+            Console.WriteLine("informe a quantidade desse produto no estoque:");
+            this.qnt_estoque = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Informe a Quantidade Minima do Estoque:");
-            qnt_min = int.Parse(Console.ReadLine());
+            Console.WriteLine("Informe a Quantidade Minima desse produto no Estoque:");
+            this.qnt_min = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Informe Sua Categoria:");
-            categoria = Console.ReadLine();
+            Console.WriteLine("Informe Sua Categoria: \n" + 
+                "1.Ferramentas Manuais" +
+                "2.Material Eletrico" +
+                "3.Pisos" +
+                "4.Janelas e Portas");
 
+            char opcao = 0;
+            opcao = Console.ReadKey().KeyChar;
+            switch(opcao)
+
+                case '1'
+                this.categoria = "Ferramentas Manuais";
+                break;
+
+                case '2'
+                this.categoria = "Material Eletrico";
+                break;
+
+                case '3'
+                this.categoria = "Pisos";
+                break;
+
+                case '4'
+                this.categoria = "Janelas e Portas";
+                break;
         }
 
         public void ProcuraProduto()
