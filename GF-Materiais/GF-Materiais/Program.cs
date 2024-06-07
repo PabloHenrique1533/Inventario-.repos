@@ -13,7 +13,9 @@ namespace GF_Materiais
     {
         static void Main(string[] args)
         {
-            Produto produto1 = new Produto();
+            
+
+        Produto produto1 = new Produto();
             produto1.cadastrarproduto();
 
             DAO dados = new DAO();

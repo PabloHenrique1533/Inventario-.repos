@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,10 +37,10 @@ namespace ClassEstoques
             this.qnt_min = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Informe Sua Categoria: \n" +
-                "1.Ferramentas Manuais" +
-                "2.Material Eletrico" +
-                "3.Pisos" +
-                "4.Janelas e Portas");
+                "\n 1.Ferramentas Manuais" +
+                "\n 2.Material Eletrico" +
+                "\n 3.Pisos" +
+                "\n 4.Janelas e Portas");
 
             int opcao = 0;
             opcao = Console.ReadKey().KeyChar;
@@ -137,14 +138,66 @@ namespace ClassEstoques
             public string cargo;
             public string tipo;
             public string permissoes_acesso;
+        public string usuario;
 
             public void CadastrarFuncionario()
             {
+            Console.WriteLine("Chegou Funcionario Novo? Então Cadastre ele Aqui! " + "\n 1.Cadstrar" + "\n 2.Login" + "3.Sair");
+            var opcao = Console.ReadLine();
+            switch (opcao)
+            {
+                case '1':
+                    
+                        Console.Clear();
+                    Console.WriteLine("====Cadastro=====");
+                    Console.WriteLine("Insira Seu Nome Completo!");
+                    nome_completo = Console.ReadLine();
+                    Console.WriteLine("Insira o Cargo Dele(a)");
+                    cargo = Console.ReadLine();
+                    Console.WriteLine("Insira o Tipo do Cargo!");
+                    tipo = Console.ReadLine();
+                    Console.WriteLine("De Um Nome de Usuario a Ele(a)");
+                    usuario = Console.ReadLine;
+                    Console.WriteLine("Crie Sua Senha!");
+                    senha = Console.ReadLine();
+
+                    if (string.IsNullOrWhiteSpace(nome_completo) || string.IsNullOrWhiteSpace(cargo) || string.IsNullOrWhiteSpace(tipo) || string.IsNullOrWhiteSpace(senha) || string.IsNullOrWhiteSpace(usuario))
+                    {
+                        Console.WriteLine("Os Campos Estão Vazios Por Favor Preencher Eles!!");
+                        Console.ReadLine();
+                        return;
+                    }
+
+                    string verificar = $"{usuario};{senha}";
+                    if (File.Exists("users.txt") && File.ReadLines("users.txt").Any(line => line.Split(;)[0] == usuario) || File.Exists("users.txt") && File.ReadLines("users.txt").Any(line => line.Split(;)[0] == senha) ){
+                        Console.WriteLine("Nome Ususario e Senha Ja Em Uso, PorFavor Tente Outro");
+                        usuario = Console.ReadLine();
+                        return;
+                    }
+
+                    File.AppendAllText("users.txt", verificar + Environment.NewLine);
+                    Console.WriteLine("Usuario Registrado Com Sucesso!");
+                    
+                break;
+
+                case '2':
+                    Console.Clear();
+                    Console.WriteLine("===Login===");
+                    Console.WriteLine("Usuario");
+                    usuario = Console.ReadLine();
+                    Console.WriteLine("Insira Sua Senha");
+
+                break;
+
+                case '3':
+                    sair();
+                break;
 
             }
 
             public void Login()
             {
+                
 
             }
 
