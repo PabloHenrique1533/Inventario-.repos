@@ -1,7 +1,7 @@
 create database estoque;
 use estoque;
 
-
+drop database estoque;
 
 -- Criação das tabelas no MySQL
 
@@ -13,6 +13,8 @@ CREATE TABLE Pessoa (
     idPessoa INTEGER PRIMARY KEY,
     nome VARCHAR(100),
     email VARCHAR(100),
+    cpf char(11),
+    data_nascimento date,
     endereco VARCHAR(100)
 );
 
@@ -26,13 +28,11 @@ CREATE TABLE Fornecedor (
 
 CREATE TABLE Usuario (
     idUsuario INTEGER PRIMARY KEY,
-    Pessoa_idPessoa INTEGER,
+    usuario varchar(100),
     senha INTEGER,
     nome_completo VARCHAR(100),
-    tipo VARCHAR(100),
-    cargo VARCHAR(100),
-    permissoes_acesso VARCHAR(100),
-    FOREIGN KEY (Pessoa_idPessoa) REFERENCES Pessoa(idPessoa)
+    data_nascimento date,
+    email VARCHAR(100)
 );
 
 CREATE TABLE Cliente (
@@ -94,5 +94,5 @@ CREATE TABLE Relatorio (
     FOREIGN KEY (Usuario_idUsuario) REFERENCES Usuario(idUsuario)
 );
 
-select * from relatorio
+select * from usuario
 

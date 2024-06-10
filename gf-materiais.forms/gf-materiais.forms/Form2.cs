@@ -12,6 +12,8 @@ namespace gf_materiais.forms
 {
     public partial class Form2 : Form
     {
+        internal Action<object, object> FormShown;
+
         public Form2()
         {
             InitializeComponent();
@@ -20,7 +22,13 @@ namespace gf_materiais.forms
         private void label5_Click(object sender, EventArgs e)
         {
             Form3 forms3 = new Form3();
+            this.Hide();
             forms3.Show();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

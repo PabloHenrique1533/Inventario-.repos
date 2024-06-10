@@ -10,18 +10,16 @@ using System.Windows.Forms;
 
 namespace gf_materiais.forms
 {
-    public partial class Form1 : Form
+    public partial class Form4 : Form
     {
-        public Form1()
+        public Form4()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            Form2 forms2 = new Form2();
-                this.Hide(); // Fecha o Form2 quando o Form3 é mostrado
-            forms2.Show();
+
         }
     }
 }
