@@ -1,0 +1,14 @@
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\gf-materiais.forms.exe.config
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\gf-materiais.forms.exe
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\gf-materiais.forms.pdb
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf-materiais.forms.csproj.AssemblyReference.cache
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.Form1.resources
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.Properties.Resources.resources
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf-materiais.forms.csproj.GenerateResource.cache
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf-materiais.forms.csproj.CoreCompileInputs.cache
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf-materiais.forms.exe
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf-materiais.forms.pdb
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf-materiais.forms.csproj.CopyComplete
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.Form2.resources
+C:\Users\DATEN\source\repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.Form3.resources
