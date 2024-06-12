@@ -61,22 +61,21 @@ namespace gf_materiais.forms
                 bool cadastroinvalido = dados.comparar(usuario,email);
                 if (cadastroinvalido)
                 {
-
+                    MessageBox.Show("Nome de usuario ou email ja em uso! Por Favor insira Outro Nome ");
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Nome de usuario ou ja em uso! Por Favor insira Outro Nome ");
-                }
-
-
                     dados.InserirNoBanco(comando, parametros);
                     MessageBox.Show("Dados Inseridos com Sucesso!");
-               
-                conexao.fecharconexao();
 
-                LoginForm forms2 = new LoginForm();
-                this.Hide();
-                forms2.Show();
+                    LoginForm forms2 = new LoginForm();
+                    this.Hide();
+                    forms2.Show();
+
+                    conexao.fecharconexao();
+                }
+
             }
             catch (Exception ex)
             {

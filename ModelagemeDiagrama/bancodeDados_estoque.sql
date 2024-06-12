@@ -30,7 +30,7 @@ CREATE TABLE Usuario (
     usuario VARCHAR(100) unique,
     senha VARCHAR(100),
     data_nascimento DATE,
-    email VARCHAR(100) unique
+    email VARCHAR(100) 
 );
 
 CREATE TABLE Cliente (

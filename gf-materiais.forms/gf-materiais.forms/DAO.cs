@@ -11,7 +11,7 @@ namespace gf_materiais.forms
 {
     internal class DAO
     {
-        string conexaoString = "server=localhost;port=3307;Database=estoque;uid=root;pwd=''";
+        string conexaoString = "server=localhost;port=3306;Database=estoque;uid=root;pwd=''";
         MySqlConnection conexao;
         MySqlCommand cmd;
 
@@ -144,19 +144,47 @@ namespace gf_materiais.forms
 
         public bool comparar(string usuario, string email)
         {
-            bool cadastroinvalido = false;
+          bool comparado = false;
             try
             {
                 abrirConexao();
-                string query = "SELECT COUNT(*) FROM Usuario WHERE usuario = @usuario AND email = @email";
-                using (MySqlCommand cmd = new MySqlCommand(query, conexao))
+                string queryusuario = "SELECT COUNT(*) FROM Usuario WHERE usuario = @usuario";
+                //string queryemail = "SELECT COUNT(*) FROM Ususario WHERE email = @email";
+
+                //comparação com o usuario;
+                using (MySqlCommand cmd = new MySqlCommand(queryusuario, conexao)) 
                 {
                     cmd.Parameters.AddWithValue("@usuario", usuario);
-                    cmd.Parameters.AddWithValue("@email", email);
 
                     int count = Convert.ToInt32(cmd.ExecuteScalar());
-                    cadastroinvalido = count < 1;
+
+                    if (count == 1)
+                    {
+                        comparado = true;
+                    }
+                    else
+                    {
+                        comparado = false;
+                    }
                 }
+                //comparação com o email;
+                /*using (MySqlCommand cmd = new MySqlCommand(queryemail, conexao))
+                {
+                    cmd.Parameters.AddWithValue("@email", email);
+              
+
+                    int count1 = Convert.ToInt32(cmd.ExecuteScalar());
+
+                    if (count1 == 1)
+                    {
+                        comparado = true;
+                    }
+                    else 
+                    {
+                        comparado = false;
+                    }
+                }*/
+
             }catch(Exception ex)
             {
                 Console.WriteLine("Erro ao executar comando SQL: " + ex.Message);
@@ -165,7 +193,7 @@ namespace gf_materiais.forms
             {
                 fecharconexao();
             }
-            return cadastroinvalido;
+            return comparado;
         }
 
     }

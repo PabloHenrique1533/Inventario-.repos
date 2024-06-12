@@ -23,5 +23,10 @@ namespace gf_materiais.forms
                 this.Hide(); // Fecha o Form2 quando o Form3 é mostrado
             forms2.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

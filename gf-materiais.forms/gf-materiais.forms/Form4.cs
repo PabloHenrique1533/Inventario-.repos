@@ -21,5 +21,15 @@ namespace gf_materiais.forms
         {
 
         }
+
+        private void iconMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EscolherOpcoes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
