@@ -65,7 +65,7 @@ namespace gf_materiais.forms
                 }
                 else
                 {
-                    MessageBox.Show("Nome de usuario ou ja em uso! Por Favor insira Outro Nome! ");
+                    MessageBox.Show("Nome de usuario ou ja em uso! Por Favor insira Outro Nome ");
                 }
 
 
