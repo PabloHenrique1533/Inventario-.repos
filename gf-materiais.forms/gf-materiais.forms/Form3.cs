@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace gf_materiais.forms
 {
-    public partial class Form3 : Form
+    public partial class Cadastro : Form
     {
         internal Action<object, object> FormShown;
 
-        public Form3()
+        public Cadastro()
         {
             InitializeComponent();
            
@@ -25,45 +25,67 @@ namespace gf_materiais.forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DAO dados = new DAO();
-            comando = "INSERT INTO Usuario(@nome_completo, @usuario, @data_nascimento, @senha, @email) values (@nome_completo)";
-            dados.insert_dados(comando);
-            dados.InserirNoBanco("@nome_completo", Nome_txt.Text);
-            dados.InserirNoBanco("@usuario", Usuario_txt.Text);
-            dados.InserirNoBanco("@data_nascimento", date_txt.Text);
-            dados.InserirNoBanco("@senha", Senha_txt.Text);
-            dados.InserirNoBanco("@email", Email_txt.Text);
-            Form2 forms2 = new Form2();
-            this.Hide();
-            forms2.Show();
-        }
+            try
+            {
+                DAO dados = new DAO();
+                DAO conexao = new DAO();
+                try 
+                {
+                    conexao.abrirConexao();
+                    
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Erro Na Conexao!"+ ex.Message);
+                }
+                //dados.insert_dados(comando);
+                comando = "INSERT INTO Usuario (nome_completo, usuario,  senha, data_nascimento, email) VALUES (@nome_completo, @usuario, @senha, @data_nascimento, @email)";
+                var parametros = new Dictionary<string, object>
+            {
+                { "@nome_completo", Nome_txt.Text },
+                { "@usuario", Usuario_txt.Text },
+                { "@senha", Senha_txt.Text },
+                { "@data_nascimento", DateTime.Parse(date_txt.Text) },
+                { "@email", Email_txt.Text }
+            };
 
-      
-        private void Nome_TextChanged(object sender, EventArgs e)
-        {
-         
-            
-                        
-        }
+                if(string.IsNullOrWhiteSpace(Nome_txt.Text) || string.IsNullOrWhiteSpace(Usuario_txt.Text) || 
+                 string.IsNullOrWhiteSpace(Senha_txt.Text) || string.IsNullOrWhiteSpace(date_txt.Text) ||
+                 string.IsNullOrWhiteSpace(Email_txt.Text))
+                {
+                    MessageBox.Show("Falto campos para preencher");
+                    return;
+                }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-         }
+                string usuario = Usuario_txt.Text;
+                string email = Email_txt.Text;
+                bool cadastroinvalido = dados.comparar(usuario,email);
+                if (cadastroinvalido)
+                {
 
-        private void Email_txt_TextChanged(object sender, EventArgs e)
-        {
-        }
+                }
+                else
+                {
+                    MessageBox.Show("Nome de usuario ou ja em uso! Por Favor insira Outro Nome! ");
+                }
 
-        private void Cpf_txt_TextChanged(object sender, EventArgs e)
-        {
-        }
 
-        private void date_txt_ValueChanged(object sender, EventArgs e)
-        {
-        }
+                    dados.InserirNoBanco(comando, parametros);
+                    MessageBox.Show("Dados Inseridos com Sucesso!");
+               
+                conexao.fecharconexao();
 
-        private void Senha_txt_TextChanged(object sender, EventArgs e)
-        {
+                LoginForm forms2 = new LoginForm();
+                this.Hide();
+                forms2.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao inserir dados: " + ex.Message); 
+            }
+
+           
         }
+        
+
     }
 }

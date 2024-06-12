@@ -1,7 +1,7 @@
 ﻿
 namespace gf_materiais.forms
 {
-    partial class Form2
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -35,8 +35,8 @@ namespace gf_materiais.forms
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.senhalogin_txt = new System.Windows.Forms.TextBox();
+            this.usuariologin_txt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,8 +49,8 @@ namespace gf_materiais.forms
             this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.senhalogin_txt);
+            this.panel1.Controls.Add(this.usuariologin_txt);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Font = new System.Drawing.Font("Showcard Gothic", 7F, System.Drawing.FontStyle.Italic);
             this.panel1.Location = new System.Drawing.Point(271, 56);
@@ -113,23 +113,21 @@ namespace gf_materiais.forms
             this.label2.TabIndex = 3;
             this.label2.Text = "Usuario";
             // 
-            // textBox2
+            // senhalogin_txt
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(63, 141);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(133, 18);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Insira Sua Senha";
+            this.senhalogin_txt.Font = new System.Drawing.Font("Arial Rounded MT Bold", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.senhalogin_txt.Location = new System.Drawing.Point(63, 141);
+            this.senhalogin_txt.Name = "senhalogin_txt";
+            this.senhalogin_txt.Size = new System.Drawing.Size(133, 18);
+            this.senhalogin_txt.TabIndex = 2;
             // 
-            // textBox1
+            // usuariologin_txt
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(63, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 18);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Insira Seu Usuario";
+            this.usuariologin_txt.Font = new System.Drawing.Font("Arial Rounded MT Bold", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuariologin_txt.Location = new System.Drawing.Point(63, 96);
+            this.usuariologin_txt.Name = "usuariologin_txt";
+            this.usuariologin_txt.Size = new System.Drawing.Size(133, 18);
+            this.usuariologin_txt.TabIndex = 1;
             // 
             // label1
             // 
@@ -141,14 +139,14 @@ namespace gf_materiais.forms
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
             // 
-            // Form2
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Name = "Form2";
+            this.Name = "LoginForm";
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -162,8 +160,8 @@ namespace gf_materiais.forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox senhalogin_txt;
+        private System.Windows.Forms.TextBox usuariologin_txt;
         private System.Windows.Forms.Label label4;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label5;

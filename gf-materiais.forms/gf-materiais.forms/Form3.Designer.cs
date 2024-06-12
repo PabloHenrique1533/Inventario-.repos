@@ -1,7 +1,7 @@
 ﻿
 namespace gf_materiais.forms
 {
-    partial class Form3
+    partial class Cadastro
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,8 @@ namespace gf_materiais.forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.date_txt = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Usuario_txt = new System.Windows.Forms.TextBox();
             this.criar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Senha_txt = new System.Windows.Forms.TextBox();
@@ -40,8 +42,6 @@ namespace gf_materiais.forms
             this.Email_txt = new System.Windows.Forms.TextBox();
             this.Nome_txt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Usuario_txt = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +73,6 @@ namespace gf_materiais.forms
             this.date_txt.Name = "date_txt";
             this.date_txt.Size = new System.Drawing.Size(133, 18);
             this.date_txt.TabIndex = 14;
-            this.date_txt.ValueChanged += new System.EventHandler(this.date_txt_ValueChanged);
             // 
             // label7
             // 
@@ -83,6 +82,23 @@ namespace gf_materiais.forms
             this.label7.Size = new System.Drawing.Size(120, 14);
             this.label7.TabIndex = 13;
             this.label7.Text = "Data De Nascimento";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(49, 132);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 14);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Usuario";
+            // 
+            // Usuario_txt
+            // 
+            this.Usuario_txt.Font = new System.Drawing.Font("Arial Rounded MT Bold", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Usuario_txt.Location = new System.Drawing.Point(52, 148);
+            this.Usuario_txt.Name = "Usuario_txt";
+            this.Usuario_txt.Size = new System.Drawing.Size(133, 18);
+            this.Usuario_txt.TabIndex = 8;
             // 
             // criar
             // 
@@ -112,7 +128,6 @@ namespace gf_materiais.forms
             this.Senha_txt.Name = "Senha_txt";
             this.Senha_txt.Size = new System.Drawing.Size(133, 18);
             this.Senha_txt.TabIndex = 5;
-            this.Senha_txt.TextChanged += new System.EventHandler(this.Senha_txt_TextChanged);
             // 
             // label3
             // 
@@ -139,7 +154,6 @@ namespace gf_materiais.forms
             this.Email_txt.Name = "Email_txt";
             this.Email_txt.Size = new System.Drawing.Size(133, 18);
             this.Email_txt.TabIndex = 2;
-            this.Email_txt.TextChanged += new System.EventHandler(this.Email_txt_TextChanged);
             // 
             // Nome_txt
             // 
@@ -148,7 +162,6 @@ namespace gf_materiais.forms
             this.Nome_txt.Name = "Nome_txt";
             this.Nome_txt.Size = new System.Drawing.Size(133, 18);
             this.Nome_txt.TabIndex = 1;
-            this.Nome_txt.TextChanged += new System.EventHandler(this.Nome_TextChanged);
             // 
             // label1
             // 
@@ -160,32 +173,14 @@ namespace gf_materiais.forms
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 14);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Usuario";
-            // 
-            // Usuario_txt
-            // 
-            this.Usuario_txt.Font = new System.Drawing.Font("Arial Rounded MT Bold", 6.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Usuario_txt.Location = new System.Drawing.Point(52, 148);
-            this.Usuario_txt.Name = "Usuario_txt";
-            this.Usuario_txt.Size = new System.Drawing.Size(133, 18);
-            this.Usuario_txt.TabIndex = 8;
-            this.Usuario_txt.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // Form3
+            // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Name = "Form3";
+            this.Name = "Cadastro";
             this.Text = "Form3";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

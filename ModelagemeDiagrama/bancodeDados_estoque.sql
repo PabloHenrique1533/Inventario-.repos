@@ -1,49 +1,47 @@
-create database estoque;
-use estoque;
-
+CREATE DATABASE estoque;
+USE estoque;
 drop database estoque;
-
 -- Criação das tabelas no MySQL
 
 CREATE TABLE LocalizacaoEstoque (
-    idLocalizacaoEstoque INTEGER PRIMARY KEY
+    idLocalizacaoEstoque INTEGER PRIMARY KEY AUTO_INCREMENT
 );
 
 CREATE TABLE Pessoa (
-    idPessoa INTEGER PRIMARY KEY,
+    idPessoa INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
     email VARCHAR(100),
-    cpf char(11),
-    data_nascimento date,
+    cpf CHAR(11),
+    data_nascimento DATE,
     endereco VARCHAR(100)
 );
 
 CREATE TABLE Fornecedor (
-    idFornecedor INTEGER PRIMARY KEY,
+    idFornecedor INTEGER PRIMARY KEY AUTO_INCREMENT,
     Pessoa_idPessoa INTEGER,
-    cnpj INT,
-    telefone INTEGER,
+    cnpj char(11),
+    telefone char(11),
     FOREIGN KEY (Pessoa_idPessoa) REFERENCES Pessoa(idPessoa)
 );
 
 CREATE TABLE Usuario (
-    idUsuario INTEGER PRIMARY KEY,
-    usuario varchar(100),
-    senha INTEGER,
+    idUsuario INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome_completo VARCHAR(100),
-    data_nascimento date,
-    email VARCHAR(100)
+    usuario VARCHAR(100) unique,
+    senha VARCHAR(100),
+    data_nascimento DATE,
+    email VARCHAR(100) unique
 );
 
 CREATE TABLE Cliente (
-    idcliente INTEGER PRIMARY KEY,
+    idcliente INTEGER PRIMARY KEY AUTO_INCREMENT,
     Pessoa_idPessoa INTEGER,
     cpf VARCHAR(100),
     FOREIGN KEY (Pessoa_idPessoa) REFERENCES Pessoa(idPessoa)
 );
 
 CREATE TABLE Produto (
-    idProduto INTEGER PRIMARY KEY,
+    idProduto INTEGER PRIMARY KEY AUTO_INCREMENT,
     LocalizacaoEstoque_id INTEGER,
     Fornecedor_idFornecedor INTEGER,
     nome VARCHAR(100),
@@ -57,7 +55,7 @@ CREATE TABLE Produto (
 );
 
 CREATE TABLE Pedido (
-    idPedido INTEGER PRIMARY KEY,
+    idPedido INTEGER PRIMARY KEY AUTO_INCREMENT,
     cliente_idcliente INTEGER,
     data_pedido DATE,
     data_entrega DATE,
@@ -78,7 +76,7 @@ CREATE TABLE Produto_has_Pedido (
 );
 
 CREATE TABLE Item_do_pedido (
-    iditem_do_pedido INTEGER PRIMARY KEY,
+    iditem_do_pedido INTEGER PRIMARY KEY AUTO_INCREMENT,
     Pedido_idPedido INTEGER,
     quantidade INTEGER,
     preco_unitario DOUBLE,
@@ -87,12 +85,11 @@ CREATE TABLE Item_do_pedido (
 );
 
 CREATE TABLE Relatorio (
-    idRelatorio INTEGER PRIMARY KEY,
+    idRelatorio INTEGER PRIMARY KEY AUTO_INCREMENT,
     Usuario_idUsuario INTEGER,
     tipo VARCHAR(100),
     data_geracao DATE,
     FOREIGN KEY (Usuario_idUsuario) REFERENCES Usuario(idUsuario)
 );
 
-select * from usuario
-
+select * from usuario;

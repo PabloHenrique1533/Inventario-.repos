@@ -19,9 +19,6 @@ namespace gf_materiais.forms
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            DAO conexao = new DAO();
-            DAO dados = new DAO();
-            conexao.bd();
             
         }
     }
