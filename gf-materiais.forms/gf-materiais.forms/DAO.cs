@@ -11,9 +11,9 @@ namespace gf_materiais.forms
 {
     internal class DAO
     {
-        string conexaoString = "server=localhost;port=3306;Database=estoque;uid=root;pwd=''";
+        string conexaoString = "server=localhost;port=3307;Database=estoque;uid=root;pwd=''";
         MySqlConnection conexao;
-        MySqlCommand cmd;
+        
 
         public DAO()
         {
@@ -122,6 +122,7 @@ namespace gf_materiais.forms
             try
             {
                 abrirConexao();
+
                 string query = "SELECT COUNT(1) FROM Usuario WHERE usuario = @usuario AND senha = @senha";
                 using (MySqlCommand cmd = new MySqlCommand(query, conexao))
                 {
@@ -194,6 +195,35 @@ namespace gf_materiais.forms
                 fecharconexao();
             }
             return comparado;
+        }
+
+        public void adicionarEstoque(string nome, string descricao, decimal preco_compra, int qnt_estoque, int qnt_min, string categoria)
+        {
+            string comando = "INSERT INTO Produto (@nome, @descricao, @preco_compra, @qnt_estoque, @qnr_min, @categoria) VALUES (nome, descricao, preco_compra, qnt_estoque, qnt_min, categoria)";
+
+            try
+            {
+                abrirConexao();
+                using(MySqlCommand cmd = new MySqlCommand(comando, conexao))
+                {
+                    cmd.Parameters.AddWithValue("@nome", nome);
+                    cmd.Parameters.AddWithValue("@descricao", descricao);
+                    cmd.Parameters.AddWithValue("@preco_compra", preco_compra);
+                    cmd.Parameters.AddWithValue("@qnt_estoque", qnt_estoque);
+                    cmd.Parameters.AddWithValue("@qnt_min", qnt_min);
+                    cmd.Parameters.AddWithValue("@categoria", categoria);
+
+                    int linhasafetadadas = cmd.ExecuteNonQuery();
+                }
+            }catch (Exception ex)
+            {
+                Console.WriteLine("Erro ao Inserir os Dados do Estoque:", ex.Message);
+            }
+            finally
+            {
+                fecharconexao();
+            }
+        
         }
 
     }

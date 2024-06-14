@@ -35,14 +35,7 @@ C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\
 C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\gf-materiais.forms.exe
 C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\gf-materiais.forms.pdb
 C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\System.Memory.dll
-C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\System.Buffers.dll
-C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\MySql.Data.xml
 C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf-materiais.forms.csproj.AssemblyReference.cache
-C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.Form1.resources
-C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.Form4.resources
 C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.Properties.Resources.resources
 C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf-materiais.forms.csproj.GenerateResource.cache
 C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf-materiais.forms.csproj.CoreCompileInputs.cache
@@ -53,3 +46,10 @@ C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\
 C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.Cadastro.resources
 C:\Users\Tecnico\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.LoginForm.resources
 C:\Users\Tecnico\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.Cadastro.resources
+C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\Bunifu.UI.WinForms.dll
+C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\Bunifu.Licensing.dll
+C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\bin\Debug\Bunifu.UI.WinForms.xml
+C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.Inventario_BemVindo.resources
+C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.telainico.resources
+C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf-materiais.forms.exe.licenses
+C:\Users\DATEN\Desktop\GF-Materiais.repos\gf-materiais.forms\gf-materiais.forms\obj\Debug\gf_materiais.forms.TeladeEstoque.resources

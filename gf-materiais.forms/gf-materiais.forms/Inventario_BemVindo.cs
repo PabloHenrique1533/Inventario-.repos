@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace gf_materiais.forms
 {
-    public partial class Form1 : Form
+    public partial class Inventario_BemVindo : Form
     {
-        public Form1()
+        public Inventario_BemVindo()
         {
             InitializeComponent();
         }

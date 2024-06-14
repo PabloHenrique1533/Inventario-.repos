@@ -17,7 +17,7 @@ namespace gf_materiais.forms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Inventario_BemVindo());
 
             
         }

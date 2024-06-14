@@ -10,26 +10,23 @@ using System.Windows.Forms;
 
 namespace gf_materiais.forms
 {
-    public partial class Form4 : Form
+    public partial class telainico : Form
     {
-        public Form4()
+        public telainico()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void bunifuLabel1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void iconMenuItem1_Click(object sender, EventArgs e)
+        private void estoque_txt_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void EscolherOpcoes_Click(object sender, EventArgs e)
-        {
-
+            TeladeEstoque estoque = new TeladeEstoque();
+            this.Hide();
+            estoque.Show();
         }
     }
 }

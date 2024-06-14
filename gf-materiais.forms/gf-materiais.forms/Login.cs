@@ -53,14 +53,16 @@ namespace gf_materiais.forms
             {
                 MessageBox.Show("Login Bem-Sucedido!");
 
-                Form4 forms4 = new Form4();
+                telainico inicio = new telainico();
                 this.Hide();
-                forms4.Show();
+                inicio.Show();
             }
             else
             {
                 MessageBox.Show("Credenciais Invalidas. Por Favor, tente novamente");
             }
+
+            
 
         }
     }
