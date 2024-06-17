@@ -11,7 +11,7 @@ namespace gf_materiais.forms
 {
     internal class DAO
     {
-        string conexaoString = "server=localhost;port=3307;Database=estoque;uid=root;pwd=''";
+        string conexaoString = "server=localhost;port=3306;Database=estoque;uid=root;pwd=''";
         MySqlConnection conexao;
         
 

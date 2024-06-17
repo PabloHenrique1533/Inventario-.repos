@@ -24,9 +24,31 @@ namespace gf_materiais.forms
 
         private void estoque_txt_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void telainico_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void estoquetxt_Click(object sender, EventArgs e)
+        {
             TeladeEstoque estoque = new TeladeEstoque();
             this.Hide();
             estoque.Show();
+        }
+
+        private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FornecedorTxt_Click(object sender, EventArgs e)
+        {
+            Fornecedor fornecedor = new Fornecedor();
+            this.Hide();
+            fornecedor.Show();
         }
     }
 }

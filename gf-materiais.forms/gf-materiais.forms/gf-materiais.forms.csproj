@@ -60,6 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO.cs" />
+    <Compile Include="Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fornecedor.Designer.cs">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario_BemVindo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     <Compile Include="telainico.Designer.cs">
       <DependentUpon>telainico.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Fornecedor.resx">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario_BemVindo.resx">
       <DependentUpon>Inventario_BemVindo.cs</DependentUpon>
     </EmbeddedResource>

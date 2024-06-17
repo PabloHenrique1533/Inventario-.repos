@@ -33,12 +33,12 @@ CREATE TABLE Usuario (
     email VARCHAR(100) 
 );
 
-CREATE TABLE Cliente (
+'CREATE TABLE Cliente (
     idcliente INTEGER PRIMARY KEY AUTO_INCREMENT,
     Pessoa_idPessoa INTEGER,
     cpf VARCHAR(100),
     FOREIGN KEY (Pessoa_idPessoa) REFERENCES Pessoa(idPessoa)
-);
+);'
 
 CREATE TABLE Produto (
     idProduto INTEGER PRIMARY KEY AUTO_INCREMENT,
@@ -56,12 +56,10 @@ CREATE TABLE Produto (
 
 CREATE TABLE Pedido (
     idPedido INTEGER PRIMARY KEY AUTO_INCREMENT,
-    cliente_idcliente INTEGER,
     data_pedido DATE,
     data_entrega DATE,
     status_pedido VARCHAR(100),
-    valor_total DOUBLE,
-    FOREIGN KEY (cliente_idcliente) REFERENCES Cliente(idcliente)
+    valor_total DOUBLE
 );
 
 CREATE TABLE Produto_has_Pedido (
@@ -92,4 +90,5 @@ CREATE TABLE Relatorio (
     FOREIGN KEY (Usuario_idUsuario) REFERENCES Usuario(idUsuario)
 );
 
-select * from usuario;
+select pessoa.nome, pessoa.email, pessoa.cpf, pessoa.data_nascimento, pessoa.endereco, fornecedor.cnpj, fornecedor.telefone from pessoa left join fornecedor on fornedor.idpessoa = pessoa.idpessoa ;
+select * from fornecedor;
